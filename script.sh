@@ -50,10 +50,9 @@ function folder() {
 }
 
 
-path=$1
 echo "Classifying the files..."
 # looping through every file within a directory
-for fullfile in /path/{.,}*; do
+for fullfile in {.*,*}; do
 	filename=$(basename "$fullfile") # extracting the filename
 	extension="${filename##*.}" # extracting the extension
 	filename="${filename%.*}" # filename without extension
